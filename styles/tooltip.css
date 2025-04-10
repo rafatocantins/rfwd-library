@@ -1,0 +1,171 @@
+/* ===== Tooltip Component ===== */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Base tooltip styles */
+.tooltip__content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-body-small-size);
+    line-height: var(--text-body-small-line-height);
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: var(--shadow-md);
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+/* Tooltip positions */
+.tooltip__content--top {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+}
+
+.tooltip__content--bottom {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+}
+
+.tooltip__content--left {
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 8px;
+}
+
+.tooltip__content--right {
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+/* Tooltip arrows */
+.tooltip__content::after {
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+}
+
+.tooltip__content--top::after {
+    border-top-color: rgba(0, 0, 0, 0.8);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip__content--bottom::after {
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip__content--left::after {
+    border-left-color: rgba(0, 0, 0, 0.8);
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.tooltip__content--right::after {
+    border-right-color: rgba(0, 0, 0, 0.8);
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltip__content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Special handling for icon-only buttons */
+.button--icon-only + .tooltip__content {
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Ensure tooltips work with disabled buttons */
+.button--disabled + .tooltip__content {
+    pointer-events: none;
+}
+
+/* Add a subtle animation for better UX */
+.tooltip__content {
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.tooltip:hover .tooltip__content--top {
+    animation-name: tooltipFadeInTop;
+}
+
+.tooltip:hover .tooltip__content--bottom {
+    animation-name: tooltipFadeInBottom;
+}
+
+.tooltip:hover .tooltip__content--left {
+    animation-name: tooltipFadeInLeft;
+}
+
+.tooltip:hover .tooltip__content--right {
+    animation-name: tooltipFadeInRight;
+}
+
+@keyframes tooltipFadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(5px) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+@keyframes tooltipFadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-5px) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+@keyframes tooltipFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(5px) translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+@keyframes tooltipFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-5px) translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateY(-50%);
+    }
+}

@@ -1,0 +1,108 @@
+/* Typography utility classes */
+.text-display-large {
+    font-size: var(--text-display-large-size);
+    font-weight: var(--text-display-large-weight);
+    line-height: var(--text-display-large-line-height);
+    letter-spacing: var(--text-display-large-tracking);
+}
+
+.text-display-medium {
+    font-size: var(--text-display-medium-size);
+    font-weight: var(--text-display-medium-weight);
+    line-height: var(--text-display-medium-line-height);
+    letter-spacing: var(--text-display-medium-tracking);
+}
+
+.text-display-small {
+    font-size: var(--text-display-small-size);
+    font-weight: var(--text-display-small-weight);
+    line-height: var(--text-display-small-line-height);
+    letter-spacing: var(--text-display-small-tracking);
+}
+
+.text-headline-large {
+    font-size: var(--text-headline-large-size);
+    font-weight: var(--text-headline-large-weight);
+    line-height: var(--text-headline-large-line-height);
+    letter-spacing: var(--text-headline-large-tracking);
+}
+
+.text-headline-medium {
+    font-size: var(--text-headline-medium-size);
+    font-weight: var(--text-headline-medium-weight);
+    line-height: var(--text-headline-medium-line-height);
+    letter-spacing: var(--text-headline-medium-tracking);
+}
+
+.text-headline-small {
+    font-size: var(--text-headline-small-size);
+    font-weight: var(--text-headline-small-weight);
+    line-height: var(--text-headline-small-line-height);
+    letter-spacing: var(--text-headline-small-tracking);
+}
+
+.text-title-large {
+    font-size: var(--text-title-large-size);
+    font-weight: var(--text-title-large-weight);
+    line-height: var(--text-title-large-line-height);
+    letter-spacing: var(--text-title-large-tracking);
+}
+
+.text-title-medium {
+    font-size: var(--text-title-medium-size);
+    font-weight: var(--text-title-medium-weight);
+    line-height: var(--text-title-medium-line-height);
+    letter-spacing: var(--text-title-medium-tracking);
+}
+
+.text-title-small {
+    font-size: var(--text-title-small-size);
+    font-weight: var(--text-title-small-weight);
+    line-height: var(--text-title-small-line-height);
+    letter-spacing: var(--text-title-small-tracking);
+}
+
+.text-body-large {
+    font-size: var(--text-body-large-size);
+    font-weight: var(--text-body-large-weight);
+    line-height: var(--text-body-large-line-height);
+    letter-spacing: var(--text-body-large-tracking);
+}
+
+.text-body-medium {
+    font-size: var(--text-body-medium-size);
+    font-weight: var(--text-body-medium-weight);
+    line-height: var(--text-body-medium-line-height);
+    letter-spacing: var(--text-body-medium-tracking);
+}
+
+.text-body-small {
+    font-size: var(--text-body-small-size);
+    font-weight: var(--text-body-small-weight);
+    line-height: var(--text-body-small-line-height);
+    letter-spacing: var(--text-body-small-tracking);
+}
+
+.text-label-large {
+    font-size: var(--text-label-large-size);
+    font-weight: var(--text-label-large-weight);
+    line-height: var(--text-label-large-line-height);
+    letter-spacing: var(--text-label-large-tracking);
+    text-transform: uppercase;
+}
+
+.text-label-medium {
+    font-size: var(--text-label-medium-size);
+    font-weight: var(--text-label-medium-weight);
+    line-height: var(--text-label-medium-line-height);
+    letter-spacing: var(--text-label-medium-tracking);
+    text-transform: uppercase;
+}
+
+.text-label-small {
+    font-size: var(--text-label-small-size);
+    font-weight: var(--text-label-small-weight);
+    line-height: var(--text-label-small-line-height);
+    letter-spacing: var(--text-label-small-tracking);
+    text-transform: uppercase;
+}

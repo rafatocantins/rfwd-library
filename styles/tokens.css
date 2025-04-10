@@ -1,0 +1,228 @@
+:root {
+    /* Light Theme (Default) */
+    /* Color tokens */
+    --primary: #DF0024; /* Primary color */
+    --on-primary: #FFFFFF; /* Text on primary color */
+    --surface: #FFF5F7; /* Light pink surface to complement the primary */
+    --background: #FFFFFF; /* Background color */
+    --outline: #A8323E; /* Darker shade of red for outlines */
+    --text-primary: #2E2E2E; /* Dark gray for primary text */
+    --text-secondary: #5C5C5C; /* Medium gray for secondary text */
+    --text-tertiary: #8C8C8C; /* Light gray for tertiary text */
+    --text-on-primary: #FFFFFF; /* Text on primary color */
+    --text-on-surface: #2E2E2E; /* Text on surface */
+    --text-error: #B3261E; /* Error color */
+    --text-success: #007B1C; /* Success color */
+    --border-color: #e0e0e0; /* Border color */
+    --card-background: #fff8f8; /* Card background color */
+    
+    /* Semantic colors for alerts */
+    --color-danger: #B3261E; /* Danger color */
+    --color-success: #007B1C; /* Success color */
+    --color-warning: #FF8800; /* Warning color */
+    --color-info: #0288D1; /* Info color */
+    --color-neutral: #8C8C8C; /* Neutral color */
+    --color-danger-bg: #FFDAD6; /* Background for danger alerts */
+    --color-success-bg: #DDFFEA; /* Background for success alerts */
+    --color-warning-bg: #FFF0D6; /* Background for warning alerts */
+    --color-info-bg: #D6F5FF; /* Background for info alerts */
+    --color-neutral-bg: #F5F5F5; /* Background for neutral alerts */
+
+    /* Shadow tokens */
+    --shadow-sm: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0px 8px 16px rgba(0, 0, 0, 0.1);
+
+    /* Border radius tokens */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-pill: 9999px;
+
+    /* Spacing tokens */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+
+    /* Animation tokens */
+    --animation-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --animation-emphasized: cubic-bezier(0.2, 0.0, 0, 1.0);
+    --animation-duration-short: 200ms;
+    --animation-duration-medium: 400ms;
+    --animation-duration-long: 500ms;
+
+    /* Typography tokens - Font family */
+    --font-family-base: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-family-heading: var(--font-family-base);
+    --font-family-mono: 'Roboto Mono', monospace;
+
+    /* Typography tokens - Font sizes */
+    --font-size-xs: 0.75rem;   /* 12px */
+    --font-size-sm: 0.875rem;  /* 14px */
+    --font-size-base: 1rem;    /* 16px */
+    --font-size-lg: 1.125rem;  /* 18px */
+    --font-size-xl: 1.25rem;   /* 20px */
+    --font-size-2xl: 1.5rem;   /* 24px */
+    --font-size-3xl: 1.875rem; /* 30px */
+    --font-size-4xl: 2.25rem;  /* 36px */
+    --font-size-5xl: 3rem;     /* 48px */
+
+    /* Typography tokens - Font weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Typography tokens - Line heights */
+    --line-height-tight: 1.2;
+    --line-height-snug: 1.375;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+    --line-height-loose: 2;
+
+    /* Typography tokens - Letter spacing */
+    --letter-spacing-tight: -0.025em;
+    --letter-spacing-normal: 0em;
+    --letter-spacing-wide: 0.025em;
+    --letter-spacing-wider: 0.05em;
+    --letter-spacing-widest: 0.1em;
+
+    /* Typography tokens - Predefined text styles */
+    --text-display-large-size: var(--font-size-5xl);
+    --text-display-large-weight: var(--font-weight-regular);
+    --text-display-large-line-height: var(--line-height-tight);
+    --text-display-large-tracking: var(--letter-spacing-tight);
+
+    --text-display-medium-size: var(--font-size-4xl);
+    --text-display-medium-weight: var(--font-weight-regular);
+    --text-display-medium-line-height: var(--line-height-tight);
+    --text-display-medium-tracking: var(--letter-spacing-tight);
+
+    --text-display-small-size: var(--font-size-3xl);
+    --text-display-small-weight: var(--font-weight-regular);
+    --text-display-small-line-height: var(--line-height-tight);
+    --text-display-small-tracking: var(--letter-spacing-normal);
+
+    --text-headline-large-size: var(--font-size-2xl);
+    --text-headline-large-weight: var(--font-weight-medium);
+    --text-headline-large-line-height: var(--line-height-snug);
+    --text-headline-large-tracking: var(--letter-spacing-normal);
+
+    --text-headline-medium-size: var(--font-size-xl);
+    --text-headline-medium-weight: var(--font-weight-medium);
+    --text-headline-medium-line-height: var(--line-height-snug);
+    --text-headline-medium-tracking: var(--letter-spacing-normal);
+
+    --text-headline-small-size: var(--font-size-lg);
+    --text-headline-small-weight: var(--font-weight-medium);
+    --text-headline-small-line-height: var(--line-height-snug);
+    --text-headline-small-tracking: var(--letter-spacing-normal);
+
+    --text-title-large-size: var(--font-size-lg);
+    --text-title-large-weight: var(--font-weight-medium);
+    --text-title-large-line-height: var(--line-height-normal);
+    --text-title-large-tracking: var(--letter-spacing-normal);
+
+    --text-title-medium-size: var(--font-size-base);
+    --text-title-medium-weight: var(--font-weight-medium);
+    --text-title-medium-line-height: var(--line-height-normal);
+    --text-title-medium-tracking: var(--letter-spacing-normal);
+
+    --text-title-small-size: var(--font-size-sm);
+    --text-title-small-weight: var(--font-weight-medium);
+    --text-title-small-line-height: var(--line-height-normal);
+    --text-title-small-tracking: var(--letter-spacing-normal);
+
+    --text-body-large-size: var(--font-size-base);
+    --text-body-large-weight: var(--font-weight-regular);
+    --text-body-large-line-height: var(--line-height-relaxed);
+    --text-body-large-tracking: var(--letter-spacing-normal);
+
+    --text-body-medium-size: var(--font-size-sm);
+    --text-body-medium-weight: var(--font-weight-regular);
+    --text-body-medium-line-height: var(--line-height-relaxed);
+    --text-body-medium-tracking: var(--letter-spacing-normal);
+
+    --text-body-small-size: var(--font-size-xs);
+    --text-body-small-weight: var(--font-weight-regular);
+    --text-body-small-line-height: var(--line-height-relaxed);
+    --text-body-small-tracking: var(--letter-spacing-normal);
+
+    --text-label-large-size: var(--font-size-sm);
+    --text-label-large-weight: var(--font-weight-medium);
+    --text-label-large-line-height: var(--line-height-normal);
+    --text-label-large-tracking: var(--letter-spacing-wide);
+
+    --text-label-medium-size: var(--font-size-xs);
+    --text-label-medium-weight: var(--font-weight-medium);
+    --text-label-medium-line-height: var(--line-height-normal);
+    --text-label-medium-tracking: var(--letter-spacing-wide);
+
+    --text-label-small-size: var(--font-size-xs);
+    --text-label-small-weight: var(--font-weight-medium);
+    --text-label-small-line-height: var(--line-height-normal);
+    --text-label-small-tracking: var(--letter-spacing-wider);
+
+    /* Hover colors */
+    --primary-hover: #C7001F; /* Slightly darker shade for hover */
+    --primary-pressed: #B3001A; /* Even darker shade for pressed state */
+    --surface-hover: #FFE5E9; /* Lighter shade for surface hover */
+
+    /* Tonal button colors */
+    --tonal-background: #fae1e4; /* Light red/pink for tonal button */
+    --tonal-hover: #f5d0d4; /* Darker shade for tonal button hover */
+    --tonal-pressed: #f0c0c5; /* Even darker shade for tonal button pressed state */
+    --tonal-text: #DF0024; /* Text color for tonal button */
+    
+    /* Active/pressed state colors */
+    --active-state-opacity: 0.12; /* Opacity for active state overlay */
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --primary: #FF4D6D; /* Brighter red for dark mode */
+    --on-primary: #FFFFFF; /* Text on primary color */
+    --surface: #1F1F1F; /* Dark surface */
+    --background: #121212; /* Dark background */
+    --outline: #FF8FA3; /* Lighter shade of red for outlines */
+    --text-primary: #E1E1E1; /* Light gray for primary text */
+    --text-secondary: #B0B0B0; /* Medium light gray for secondary text */
+    --text-tertiary: #7E7E7E; /* Medium gray for tertiary text */
+    --text-on-primary: #FFFFFF; /* Text on primary color */
+    --text-on-surface: #E1E1E1; /* Text on surface */
+    --text-error: #F28B82; /* Lighter error color for dark mode */
+    --text-success: #81C995; /* Lighter success color for dark mode */
+    --border-color: #333333; /* Darker border color */
+    --card-background: #1E1E1E; /* Card background color */
+    
+    /* Semantic colors for alerts in dark mode */
+    --color-danger: #F28B82; /* Lighter danger color */
+    --color-success: #81C995; /* Lighter success color */
+    --color-warning: #FDD663; /* Lighter warning color */
+    --color-info: #8AB4F8; /* Lighter info color */
+    --color-neutral: #9AA0A6; /* Lighter neutral color */
+    --color-danger-bg: #3D2C2A; /* Darker background for danger alerts */
+    --color-success-bg: #1E3229; /* Darker background for success alerts */
+    --color-warning-bg: #3D3226; /* Darker background for warning alerts */
+    --color-info-bg: #1F2A35; /* Darker background for info alerts */
+    --color-neutral-bg: #2A2A2A; /* Darker background for neutral alerts */
+}
+
+/* Dark Theme hover and pressed states */
+[data-theme="dark"] {
+    --primary-hover: #FF6B85; /* Lighter shade for hover in dark mode */
+    --primary-pressed: #FF8FA3; /* Even lighter shade for pressed state in dark mode */
+    --surface-hover: #2A2A2A; /* Slightly lighter surface for hover in dark mode */
+    
+    /* Tonal button colors for dark mode */
+    --tonal-background: #3D2C2F; /* Dark red/pink for tonal button */
+    --tonal-hover: #4D3A3E; /* Lighter shade for tonal button hover */
+    --tonal-pressed: #5D484D; /* Even lighter shade for tonal button pressed state */
+    --tonal-text: #FF4D6D; /* Text color for tonal button */
+}

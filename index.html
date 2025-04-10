@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael's Material Design System</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/tooltip.css">
+    <link rel="stylesheet" href="styles/alerts.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/tab.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <meta name="color-scheme" content="light dark">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>Rafael's Material Design System</h1>
+            <p>A collection of reusable UI components</p>
+        </header>
+
+        <!-- Button Component Section -->
+        <section class="component">
+            <h2 class="component__title">Buttons</h2>
+            <p>Buttons allow users to take actions with a single tap. They communicate actions that users can take and are typically placed in dialogs, forms, cards, and toolbars.</p>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Button Variants</h3>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled">Filled</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Filled</p>
+                    </div>
+                    <div>
+                        <button class="button button--outlined">Outlined</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Outlined</p>
+                    </div>
+                    <div>
+                        <button class="button button--text">Text</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Text</p>
+                    </div>
+                    <div>
+                        <button class="button button--elevated">Elevated</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Elevated</p>
+                    </div>
+                    <div>
+                        <button class="button button--tonal">Tonal</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Tonal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Button Sizes</h3>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled button--small">Small</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Small</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--medium">Medium</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Medium (Default)</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--large">Large</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Large</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Button States</h3>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled">Default</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Default</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled">Hover</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Hover</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled" style="background: var(--primary-pressed); transform: translateY(1px);">Pressed</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Pressed</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled" style="outline: 2px solid var(--primary); outline-offset: 2px;">Focused</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Focused</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--disabled">Disabled</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Disabled</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Buttons with Icons</h3>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled button--icon-left">
+                            <span class="button__icon button__icon--add"></span>
+                            Icon Left
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Icon Left</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-right">
+                            <span class="button__icon button__icon--add"></span>
+                            Right Icon
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Icon Right</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Icon Only</p>
+                    </div>
+                </div>
+
+                <h4 class="text-title-small" style="margin-top: 24px; margin-bottom: 16px;">Icon-Only Button Variants</h4>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Filled</p>
+                    </div>
+                    <div>
+                        <button class="button button--outlined button--icon-only">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Outlined</p>
+                    </div>
+                    <div>
+                        <button class="button button--tonal button--icon-only">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Tonal</p>
+                    </div>
+                    <div>
+                        <button class="button button--elevated button--icon-only">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Elevated</p>
+                    </div>
+                </div>
+
+                <h4 class="text-title-small" style="margin-top: 24px; margin-bottom: 16px;">Icon Classes</h4>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Add</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--search"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Search</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--close"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Close</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--arrow-left"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Arrow Left</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--arrow-right"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Arrow Right</p>
+                    </div>
+                </div>
+
+                <h4 class="text-title-small" style="margin-top: 24px; margin-bottom: 16px;">Icon-Only Button Sizes</h4>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled button--icon-only button--small">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Small</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-only button--medium">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Medium</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-only button--large">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Large</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Click Effects</h3>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled button--ripple">Ripple Effect</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Click to see ripple</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--loading">Loading</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Loading state (static)</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--disabled" disabled>Disabled</button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Disabled state</p>
+                    </div>
+                    <div>
+                        <a href="#" class="button button--filled">Link Button</a>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">As link</p>
+                    </div>
+                </div>
+
+                <h4 class="text-title-small" style="margin-top: 24px; margin-bottom: 16px;">Interactive Loading Buttons</h4>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled js-loading-trigger" data-success-text="Completed!">
+                            Click to Load
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Filled Loading</p>
+                    </div>
+                    <div>
+                        <button class="button button--outlined js-loading-trigger" data-loading-time="1500">
+                            Click to Load
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Outlined Loading</p>
+                    </div>
+                    <div>
+                        <button class="button button--text js-loading-trigger" data-success-time="1000">
+                            Click to Load
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Text Loading</p>
+                    </div>
+                    <div>
+                        <button class="button button--elevated js-loading-trigger">
+                            Click to Load
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Elevated Loading</p>
+                    </div>
+                    <div>
+                        <button class="button button--tonal js-loading-trigger">
+                            Click to Load
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Tonal Loading</p>
+                    </div>
+                </div>
+
+                <h4 class="text-title-small" style="margin-top: 24px; margin-bottom: 16px;">Disabled Button Variants</h4>
+                <div class="component__variants">
+                    <div>
+                        <button class="button button--filled button--disabled" disabled>
+                            Disabled
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Filled Disabled</p>
+                    </div>
+                    <div>
+                        <button class="button button--outlined button--disabled" disabled>
+                            Disabled
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Outlined Disabled</p>
+                    </div>
+                    <div>
+                        <button class="button button--text button--disabled" disabled>
+                            Disabled
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Text Disabled</p>
+                    </div>
+                    <div>
+                        <button class="button button--elevated button--disabled" disabled>
+                            Disabled
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Elevated Disabled</p>
+                    </div>
+                    <div>
+                        <button class="button button--tonal button--disabled" disabled>
+                            Disabled
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Tonal Disabled</p>
+                    </div>
+                    <div>
+                        <button class="button button--filled button--icon-only button--disabled" disabled>
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <p class="text-body-small" style="margin-top: 8px; text-align: center;">Icon-Only Disabled</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Button Groups</h3>
+                <div style="display: flex; gap: 0; border-radius: var(--radius-md); overflow: hidden;">
+                    <button class="button button--filled" style="border-radius: 0;">Left</button>
+                    <button class="button button--filled" style="border-radius: 0; border-left: 1px solid rgba(255,255,255,0.2); border-right: 1px solid rgba(255,255,255,0.2);">Middle</button>
+                    <button class="button button--filled" style="border-radius: 0;">Right</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tooltip Component Section -->
+        <section class="component">
+            <h2 class="component__title">Tooltips</h2>
+            <p>Tooltips display informative text when users hover over an element.</p>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Tooltip Positions</h3>
+                <div class="component__variants">
+                    <div class="tooltip">
+                        <button class="button button--filled">Top Tooltip</button>
+                        <span class="tooltip__content tooltip__content--top" role="tooltip">Appears on top</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--filled">Bottom Tooltip</button>
+                        <span class="tooltip__content tooltip__content--bottom" role="tooltip">Appears on bottom</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--filled">Left Tooltip</button>
+                        <span class="tooltip__content tooltip__content--left" role="tooltip">Appears on left</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--filled">Right Tooltip</button>
+                        <span class="tooltip__content tooltip__content--right" role="tooltip">Appears on right</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Tooltip with Different Button Styles</h3>
+                <div class="component__variants">
+                    <div class="tooltip">
+                        <button class="button button--outlined">Outlined Button</button>
+                        <span class="tooltip__content tooltip__content--top" role="tooltip">Tooltip for outlined button</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--text">Text Button</button>
+                        <span class="tooltip__content tooltip__content--top" role="tooltip">Tooltip for text button</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--elevated">Elevated Button</button>
+                        <span class="tooltip__content tooltip__content--top" role="tooltip">Tooltip for elevated button</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--tonal">Tonal Button</button>
+                        <span class="tooltip__content tooltip__content--top" role="tooltip">Tooltip for tonal button</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Tooltip with Icon Buttons</h3>
+                <div class="component__variants">
+                    <div class="tooltip">
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <span class="tooltip__content tooltip__content--top" role="tooltip">Add item</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--search"></span>
+                        </button>
+                        <span class="tooltip__content tooltip__content--bottom" role="tooltip">Search</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--close"></span>
+                        </button>
+                        <span class="tooltip__content tooltip__content--left" role="tooltip">Close</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--filled button--icon-only">
+                            <span class="button__icon button__icon--arrow-right"></span>
+                        </button>
+                        <span class="tooltip__content tooltip__content--right" role="tooltip">Next</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Tooltip with Disabled Buttons</h3>
+                <div class="component__variants">
+                    <div class="tooltip">
+                        <button class="button button--filled button--disabled" disabled>Disabled Button</button>
+                        <span class="tooltip__content tooltip__content--top" role="tooltip">Tooltip still works on disabled buttons</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--outlined button--disabled" disabled>Disabled Outlined</button>
+                        <span class="tooltip__content tooltip__content--bottom" role="tooltip">Helpful information</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <button class="button button--filled button--icon-only button--disabled" disabled>
+                            <span class="button__icon button__icon--add"></span>
+                        </button>
+                        <span class="tooltip__content tooltip__content--right" role="tooltip">Disabled add button</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alert Toaster Component Section -->
+        <section class="component">
+            <h2 class="component__title">Alert Toasters</h2>
+            <p>Alert toasters provide brief notifications or feedback messages to users. They appear temporarily and disappear automatically after a set duration or when dismissed by the user.</p>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Alert Toaster Variants</h3>
+                <div class="component__variants" style="flex-direction: column; align-items: stretch;">
+                    <!-- Static examples of alert toasters -->
+                    <div class="alert-toast alert-toast--danger" style="opacity: 1; transform: translateX(0); margin-bottom: 16px;">
+                        <span class="alert-toast__icon alert-icon--danger"></span>
+                        <div class="alert-toast__content">
+                            <div class="alert-toast__message">This is a danger alert message</div>
+                        </div>
+                        <button class="alert-toast__close" aria-label="Close notification">&times;</button>
+                    </div>
+                    
+                    <div class="alert-toast alert-toast--success" style="opacity: 1; transform: translateX(0); margin-bottom: 16px;">
+                        <span class="alert-toast__icon alert-icon--success"></span>
+                        <div class="alert-toast__content">
+                            <div class="alert-toast__message">This is a success alert message</div>
+                        </div>
+                        <button class="alert-toast__close" aria-label="Close notification">&times;</button>
+                    </div>
+                    
+                    <div class="alert-toast alert-toast--warning" style="opacity: 1; transform: translateX(0); margin-bottom: 16px;">
+                        <span class="alert-toast__icon alert-icon--warning"></span>
+                        <div class="alert-toast__content">
+                            <div class="alert-toast__message">This is a warning alert message</div>
+                        </div>
+                        <button class="alert-toast__close" aria-label="Close notification">&times;</button>
+                    </div>
+                    
+                    <div class="alert-toast alert-toast--info" style="opacity: 1; transform: translateX(0); margin-bottom: 16px;">
+                        <span class="alert-toast__icon alert-icon--info"></span>
+                        <div class="alert-toast__content">
+                            <div class="alert-toast__message">This is an info alert message</div>
+                        </div>
+                        <button class="alert-toast__close" aria-label="Close notification">&times;</button>
+                    </div>
+                    
+                    <div class="alert-toast alert-toast--neutral" style="opacity: 1; transform: translateX(0);">
+                        <span class="alert-toast__icon alert-icon--neutral"></span>
+                        <div class="alert-toast__content">
+                            <div class="alert-toast__message">This is a neutral alert message</div>
+                        </div>
+                        <button class="alert-toast__close" aria-label="Close notification">&times;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Interactive Alert Toaster Demo</h3>
+                <p>Use this form to create and display live alert toasters with your custom settings.</p>
+                <form id="alert-toaster-demo-form" class="alert-demo-form">
+                    <div class="form-group">
+                        <label for="alert-message" class="text-label-large">Message</label>
+                        <input type="text" id="alert-message" class="text-input" placeholder="Enter alert message" value="This is a custom alert message">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="alert-variant" class="text-label-large">Variant</label>
+                        <select id="alert-variant" class="select-input">
+                            <option value="success">Success</option>
+                            <option value="danger">Danger</option>
+                            <option value="warning">Warning</option>
+                            <option value="info">Info</option>
+                            <option value="neutral">Neutral</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="alert-duration" class="text-label-large">Duration (ms)</label>
+                        <input type="number" id="alert-duration" class="text-input" value="5000" min="1000" step="1000">
+                    </div>
+                    
+                    <button type="submit" class="button button--filled" style="margin-top: 16px;">Show Alert</button>
+                </form>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Alert Toaster Features</h3>
+                <div class="component__variants" style="flex-direction: column; align-items: stretch;">
+                    <!-- Persistent alert example -->
+                    <div class="alert-toast alert-toast--info" style="opacity: 1; transform: translateX(0); margin-bottom: 16px;">
+                        <span class="alert-toast__icon alert-icon--info"></span>
+                        <div class="alert-toast__content">
+                            <div class="alert-toast__message">This alert will stay until dismissed (Persistent Alert)</div>
+                        </div>
+                        <button class="alert-toast__close" aria-label="Close notification">&times;</button>
+                    </div>
+                    
+                    <!-- No close button example -->
+                    <div class="alert-toast alert-toast--warning" style="opacity: 1; transform: translateX(0); margin-bottom: 16px;">
+                        <span class="alert-toast__icon alert-icon--warning"></span>
+                        <div class="alert-toast__content">
+                            <div class="alert-toast__message">This alert has no close button (Auto-dismiss Only)</div>
+                        </div>
+                        <!-- No close button here -->
+                    </div>
+                    
+                    <!-- Long message example -->
+                    <div class="alert-toast alert-toast--success" style="opacity: 1; transform: translateX(0);">
+                        <span class="alert-toast__icon alert-icon--success"></span>
+                        <div class="alert-toast__content">
+                            <div class="alert-toast__message">This is an example of an alert with a longer message that might wrap to multiple lines. The alert container will expand to fit the content.</div>
+                        </div>
+                        <button class="alert-toast__close" aria-label="Close notification">&times;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Component Section -->
+        <section class="component">
+            <h2 class="component__title">Cards</h2>
+            <p>Cards contain content and actions about a single subject.</p>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Card Variants</h3>
+                <div class="component__variants">
+                    <div class="card card--elevated">
+                        <div class="card__content">
+                            <h3 class="card__title">Elevated Card</h3>
+                            <p>This card has elevation with shadow effect and no border.</p>
+                        </div>
+                        <div class="card__actions">
+                            <button class="button button--outlined">Cancel</button>
+                            <button class="button button--filled">Confirm</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Outlined Card</h3>
+                            <p>A card with border and no elevation, suitable for most contexts.</p>
+                        </div>
+                        <div class="card__actions">
+                            <button class="button button--outlined">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Card with Media</h3>
+                <div class="component__variants">
+                    <div class="card">
+                        <img src="./assets/b6eb1be5-9eca-4d87-8a1f-88fb000c64d8.png" class="card__media" alt="Card media">
+                        <div class="card__content">
+                            <h3 class="card__title">Media Card</h3>
+                            <p>This card includes an image at the top to showcase visual content.</p>
+                        </div>
+                        <div class="card__actions">
+                            <button class="button button--outlined">Share</button>
+                            <button class="button button--filled">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Component Section -->
+        <section class="component">
+            <h2 class="component__title">Modals</h2>
+            <p>Modals display content that requires user attention or interaction.</p>
+
+            <div class="component__demo">
+                <button class="button button--filled" data-modal-open="demo-modal">Open Basic Modal</button>
+                <button class="button button--outlined" data-modal-open="demo-modal-2">Open Modal with Subtitle</button>
+            </div>
+
+            <!-- Basic Modal -->
+            <div id="demo-modal" class="modal-container">
+                <div class="modal__overlay" data-modal-close></div>
+                <div class="modal">
+                    <button class="modal__close" data-modal-close aria-label="Close modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="modal__header">
+                        <h2 class="modal__title">Modal Title</h2>
+                    </div>
+                    <div class="modal__content">
+                        <p>This is a basic modal dialog that follows the design system. It has a clear visual hierarchy and proper spacing.</p>
+                        <p>The overlay ensures the modal stands out from the background content.</p>
+                    </div>
+                    <div class="modal__actions">
+                        <button class="button button--outlined" data-modal-close>Cancel</button>
+                        <button class="button button--filled">Confirm</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal with Subtitle -->
+            <div id="demo-modal-2" class="modal-container">
+                <div class="modal__overlay" data-modal-close></div>
+                <div class="modal">
+                    <button class="modal__close" data-modal-close aria-label="Close modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="modal__header">
+                        <h2 class="modal__title">Feature Confirmation</h2>
+                        <p class="modal__subtitle">Please review the information below</p>
+                    </div>
+                    <div class="modal__content">
+                        <p>This modal includes a subtitle for additional context. The backdrop blur effect helps to focus attention on the modal content.</p>
+                        <p>You can close this modal by clicking the X button, clicking outside the modal, or using the Cancel button.</p>
+                    </div>
+                    <div class="modal__actions">
+                        <button class="button button--outlined" data-modal-close>Cancel</button>
+                        <button class="button button--filled">Proceed</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs Component Section -->
+        <section class="component">
+            <h2 class="component__title">Tabs</h2>
+            <p>Tabs organize content into separate views where only one view is visible at a time.</p>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Basic Tabs</h3>
+                <div class="tabs" id="basic-tabs">
+                    <!-- Tab navigation -->
+                    <div class="tabs__nav" role="tablist">
+                        <a href="#tab1" class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="tab1">Tab 1</a>
+                        <a href="#tab2" class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab2">Tab 2</a>
+                        <a href="#tab3" class="tabs__tab" role="tab" aria-selected="false" aria-controls="tab3">Tab 3</a>
+                    </div>
+
+                    <!-- Tab content panels -->
+                    <div id="tab1" class="tabs__panel tabs__panel--active" role="tabpanel" aria-labelledby="tab1">
+                        <h4 class="tabs__panel-title">Tab 1 Content</h4>
+                        <p>This is the content for Tab 1. The tabs now use JavaScript for better browser compatibility.</p>
+                        <p>Click on any tab to switch between content panels with smooth transitions.</p>
+                    </div>
+                    <div id="tab2" class="tabs__panel" role="tabpanel" aria-labelledby="tab2">
+                        <h4 class="tabs__panel-title">Tab 2 Content</h4>
+                        <p>This is the content for Tab 2. The active tab is highlighted automatically.</p>
+                        <p>The implementation ensures only one tab is visible at a time.</p>
+                    </div>
+                    <div id="tab3" class="tabs__panel" role="tabpanel" aria-labelledby="tab3">
+                        <h4 class="tabs__panel-title">Tab 3 Content</h4>
+                        <p>This is the content for Tab 3. This implementation is fully accessible.</p>
+                        <p>It works with keyboard navigation and screen readers using proper ARIA attributes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component__demo">
+                <h3 class="component__demo-title">Tabs with Different Content</h3>
+                <div class="tabs" id="feature-tabs">
+                    <!-- Tab navigation -->
+                    <div class="tabs__nav" role="tablist">
+                        <a href="#features" class="tabs__tab tabs__tab--active" role="tab" aria-selected="true" aria-controls="features">Features</a>
+                        <a href="#specs" class="tabs__tab" role="tab" aria-selected="false" aria-controls="specs">Specifications</a>
+                        <a href="#reviews" class="tabs__tab" role="tab" aria-selected="false" aria-controls="reviews">Reviews</a>
+                    </div>
+
+                    <!-- Tab content panels -->
+                    <div id="features" class="tabs__panel tabs__panel--active" role="tabpanel" aria-labelledby="features">
+                        <h4 class="tabs__panel-title">Key Features</h4>
+                        <ul class="tabs__panel-list">
+                            <li>Enhanced with JavaScript</li>
+                            <li>Works with browser history</li>
+                            <li>Fully accessible</li>
+                            <li>Responsive design</li>
+                        </ul>
+                    </div>
+                    <div id="specs" class="tabs__panel" role="tabpanel" aria-labelledby="specs">
+                        <h4 class="tabs__panel-title">Technical Specifications</h4>
+                        <p>This tab component uses JavaScript for better browser compatibility and user experience.</p>
+                        <p>It's lightweight and ensures only one tab is visible at a time.</p>
+                    </div>
+                    <div id="reviews" class="tabs__panel" role="tabpanel" aria-labelledby="reviews">
+                        <h4 class="tabs__panel-title">User Reviews</h4>
+                        <blockquote class="tabs__panel-quote">
+                            "These tabs work perfectly with smooth transitions. Impressive!"
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script src="js/tabs.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/button.js"></script>
+    <script src="js/alert-toaster.js"></script>
+    <script src="js/theme-switcher.js"></script>
+</body>
+</html>

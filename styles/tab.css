@@ -1,0 +1,176 @@
+/* ===== Tabs Component ===== */
+.tabs {
+    width: 100%;
+    margin-bottom: var(--space-lg);
+    position: relative;
+}
+
+/* Tab Navigation */
+.tabs__nav {
+    display: flex;
+    gap: var(--space-md);
+    border-bottom: 1px solid var(--outline);
+    position: relative;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.tabs__tab {
+    font-size: var(--text-title-medium-size);
+    font-weight: var(--text-title-medium-weight);
+    line-height: var(--text-title-medium-line-height);
+    letter-spacing: var(--text-title-medium-tracking);
+    padding: var(--space-sm) var(--space-md);
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all var(--animation-duration-short) var(--animation-standard);
+}
+
+.tabs__tab:hover {
+    color: var(--primary);
+}
+
+.tabs__tab:focus {
+    outline: none;
+}
+
+.tabs__tab:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Active tab styling */
+.tabs__tab--active {
+    color: var(--primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.tabs__tab--active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary);
+}
+
+/* Tab Panels */
+.tabs__panel {
+    display: none;
+    background-color: var(--card-background);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    min-height: 150px;
+    border: 1px solid var(--border-color);
+    animation: fadeIn var(--animation-duration-medium) var(--animation-standard);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Show active tab panel */
+.tabs__panel--active {
+    display: block;
+}
+
+/* Tab panel content styling */
+.tabs__panel-title {
+    font-size: var(--text-title-large-size);
+    font-weight: var(--text-title-large-weight);
+    line-height: var(--text-title-large-line-height);
+    letter-spacing: var(--text-title-large-tracking);
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+.tabs__panel p {
+    font-size: var(--text-body-large-size);
+    font-weight: var(--text-body-large-weight);
+    line-height: var(--text-body-large-line-height);
+    letter-spacing: var(--text-body-large-tracking);
+    color: var(--text-secondary);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+.tabs__panel-list {
+    padding-left: 1.5rem;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+    font-size: var(--text-body-large-size);
+    line-height: var(--text-body-large-line-height);
+    color: var(--text-secondary);
+}
+
+.tabs__panel-quote {
+    border-left: 3px solid var(--primary);
+    padding-left: var(--space-md);
+    margin-left: 0;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+    color: var(--text-tertiary);
+    font-style: italic;
+    font-size: var(--text-body-large-size);
+    line-height: var(--text-body-large-line-height);
+}
+
+/* Tab panel content styling for backward compatibility */
+.tabpanel h4 {
+    font-size: var(--text-title-large-size);
+    font-weight: var(--text-title-large-weight);
+    line-height: var(--text-title-large-line-height);
+    letter-spacing: var(--text-title-large-tracking);
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+.tabpanel p {
+    font-size: var(--text-body-large-size);
+    font-weight: var(--text-body-large-weight);
+    line-height: var(--text-body-large-line-height);
+    letter-spacing: var(--text-body-large-tracking);
+    color: var(--text-secondary);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+.tabpanel ul {
+    padding-left: 1.5rem;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+    font-size: var(--text-body-large-size);
+    line-height: var(--text-body-large-line-height);
+    color: var(--text-secondary);
+}
+
+.tabpanel blockquote {
+    border-left: 3px solid var(--primary);
+    padding-left: var(--space-md);
+    margin-left: 0;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-md);
+    color: var(--text-tertiary);
+    font-style: italic;
+    font-size: var(--text-body-large-size);
+    line-height: var(--text-body-large-line-height);
+}
+
+@media (max-width: 768px) {
+    .tabs__nav {
+        gap: var(--space-sm);
+    }
+
+    .tabs__tab {
+        padding: var(--space-sm);
+    }
+}

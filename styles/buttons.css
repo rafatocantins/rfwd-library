@@ -1,0 +1,463 @@
+/* ===== Button Component ===== */
+.button {
+    font-family: var(--font-family-base);
+    font-size: var(--text-label-large-size);
+    font-weight: var(--text-label-large-weight);
+    line-height: var(--text-label-large-line-height);
+    letter-spacing: var(--text-label-large-tracking);
+    border: none;
+    border-radius: var(--radius-md);
+    padding: var(--space-sm) var(--space-md);
+    cursor: pointer;
+    transition: all var(--animation-duration-short) var(--animation-standard);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    position: relative;
+    overflow: hidden;
+    min-width: 100px;
+    text-decoration: none;
+}
+
+/* Button Variants */
+.button--filled {
+    background: var(--primary);
+    color: var(--text-on-primary);
+}
+
+.button--outlined {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--outline);
+}
+
+.button--text {
+    background: transparent;
+    color: var(--primary);
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+    min-width: auto;
+}
+
+.button--elevated {
+    background: white;
+    color: var(--primary);
+    box-shadow: var(--shadow-md);
+    border: none;
+}
+
+.button--tonal {
+    background-color: var(--tonal-background);
+    color: var(--tonal-text);
+    border: none;
+}
+
+/* Button Sizes */
+.button--small {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--text-label-medium-size);
+    min-width: 80px;
+    height: 32px;
+}
+
+.button--medium {
+    /* Default size, explicitly defined for clarity */
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--text-label-large-size);
+    min-width: 100px;
+    height: 40px;
+}
+
+.button--large {
+    padding: var(--space-md) var(--space-lg);
+    font-size: calc(var(--text-label-large-size) * 1.15);
+    font-weight: var(--font-weight-medium);
+    min-width: 120px;
+    height: 48px;
+    letter-spacing: 0.03em;
+}
+
+/* States */
+.button:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.button--filled:hover {
+    background-color: var(--primary-hover);
+}
+
+.button--outlined:hover {
+    background-color: var(--primary); /* Change to primary color */
+    color: var(--on-primary); /* Use on-primary for text */
+    border-color: var(--primary);
+}
+
+.button--text:hover {
+    background-color: rgba(223, 0, 36, 0.05); /* Very light primary background */
+    color: var(--primary-hover);
+}
+
+/* Text button icon-only hover state is handled separately above */
+
+.button--elevated:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.button--tonal:hover {
+    background-color: var(--tonal-hover);
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+.button--filled:active {
+    background-color: var(--primary-pressed);
+}
+
+.button--outlined:active {
+    background-color: rgba(223, 0, 36, 0.12); /* Slightly darker than hover */
+}
+
+.button--text:active {
+    background-color: rgba(223, 0, 36, 0.08); /* Slightly darker than hover */
+}
+
+.button--elevated:active {
+    background-color: rgba(223, 0, 36, 0.05);
+    box-shadow: var(--shadow-sm);
+}
+
+.button--tonal:active {
+    background-color: var(--tonal-pressed);
+}
+
+.button--disabled {
+    background-color: var(--surface);
+    opacity: 0.38;
+    cursor: not-allowed !important;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.button--filled.button--disabled {
+    background: var(--surface);
+    color: var(--text-primary);
+    cursor: not-allowed;
+}
+
+.button--outlined.button--disabled {
+    border-color: rgba(0, 0, 0, 0.12);
+    color: var(--text-primary);
+    cursor: not-allowed;
+}
+
+.button--text.button--disabled {
+    background: transparent;
+    color: var(--text-primary);
+    cursor: not-allowed;
+}
+
+.button--elevated.button--disabled {
+    background: var(--surface);
+    color: var(--text-primary);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.button--tonal.button--disabled {
+    background: var(--surface);
+    color: var(--text-primary);
+    cursor: not-allowed;
+}
+
+/* Button with icon */
+.button--icon-left {
+    flex-direction: row;
+}
+
+.button--icon-right {
+    flex-direction: row-reverse;
+}
+
+.button--icon-only {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.button--icon-only.button--disabled span{
+    filter: invert(15%) sepia(8%) saturate(17%) hue-rotate(319deg) brightness(92%) contrast(88%);
+}
+
+/* Ensure icon color matches text color for filled buttons */
+.button--filled.button--icon-only .button__icon::before {
+    /* Use white color for icons in primary filled buttons */
+    stroke: var(--text-on-primary);
+    color: var(--text-on-primary);
+}
+
+.button--small.button--icon-only {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+}
+
+.button--large.button--icon-only {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+}
+
+.button__icon {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.button--small .button__icon {
+    width: 16px;
+    height: 16px;
+}
+
+.button--large .button__icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* Icon classes for buttons */
+.button__icon--add::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v14'%3E%3C/path%3E%3Cpath d='M5 12h14'%3E%3C/path%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.button__icon--arrow-left::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.button__icon--arrow-right::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.button__icon--search::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.button__icon--close::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*
+ * Icon color handling for different button variants
+ * We use CSS filters to control icon colors:
+ * - Primary/filled buttons have white icons
+ * - Other button variants have primary-colored icons
+ * - A utility class .button__icon--white is available for custom implementations
+ */
+/* Base icon styling - default is primary color */
+.button__icon::before {
+    /* Default icon color is the primary color */
+    filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(343deg) brightness(91%) contrast(111%);
+}
+
+/* Primary/filled buttons should have white icons */
+.button--filled .button__icon::before {
+    /* White icons for primary/filled buttons */
+    filter: brightness(0) invert(1);
+}
+
+/* Ensure other button variants maintain primary-colored icons */
+.button--outlined .button__icon::before,
+.button--text .button__icon::before,
+.button--elevated .button__icon::before,
+.button--tonal .button__icon::before {
+    /* Primary color for icons in other button variants */
+    filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(343deg) brightness(91%) contrast(111%);
+}
+
+/* Change icon color to white on hover for outlined buttons */
+.button--outlined:hover .button__icon::before {
+    filter: brightness(0) invert(1);
+}
+
+/* Icon-only outlined button hover state */
+.button--icon-only.button--outlined:hover .button__icon::before {
+    filter: brightness(0) invert(1);
+}
+
+/* Icon-only outlined button background hover state */
+.button--icon-only.button--outlined:hover {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border-color: var(--primary);
+}
+
+/* Utility class for white icons - can be used for custom implementations */
+.button__icon--white::before {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Click effect - Ripple */
+.button--ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Static ripple effect for focus */
+.button--ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: var(--primary-hover);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.button--ripple:focus:not(:active)::after {
+    animation: ripple 0.6s ease-out;
+}
+
+/* Dynamic ripple effect for click */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+/* Variant-specific ripple colors */
+.button--outlined .ripple,
+.button--text .ripple,
+.button--elevated .ripple,
+.button--tonal .ripple {
+    background-color: rgba(223, 0, 36, 0.2);
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* Loading state */
+.button--loading {
+    cursor: wait;
+    position: relative;
+    color: transparent !important;
+}
+
+.button--loading::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: button-loading-spinner 0.8s ease infinite;
+}
+
+/* Variant-specific loading spinners */
+.button--outlined.button--loading::after,
+.button--text.button--loading::after,
+.button--elevated.button--loading::after,
+.button--tonal.button--loading::after {
+    border: 3px solid rgba(223, 0, 36, 0.2);
+    border-top-color: var(--primary);
+}
+
+/* Size-specific loading spinners */
+.button--small.button--loading::after {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+}
+
+.button--large.button--loading::after {
+    width: 22px;
+    height: 22px;
+    border-width: 3px;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
